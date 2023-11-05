@@ -5,7 +5,7 @@ This is a simple project that I wanted to fix a very unique and small problem. I
 I decided to spend ~$120 dollars to create 2 boxes, fitted with Arduino Nanos, RF24 radio modules, LEDs, 9V Batteries, and Battery level indicator circuits. 
 
 **Features:**
-- Automatically "spacebar" and "windows + M" minimize current working tab when PID sensor is triggered on remote box.
+- Automatically "spacebar + escape" and "ALT + TAB" when PID sensor is triggered on remote box.
 - LED Indiciator on box connected to PC to indiciate status of connection and battery level of remote box.
   - RED when no connection available
   - WHITE/BLUE when active
