@@ -20,8 +20,9 @@ void setup(){
     //Runtime.getRuntime().exec("notepad");
     robot = new Robot();
   } catch (Exception e) {
-    e.printStackTrace();
-    exit();
+    //e.printStackTrace();
+    //exit();
+    // do nothing  
   }
 }
 
@@ -40,22 +41,26 @@ void serialEvent(Serial myPort){
    altTab = true;
    altTab();
  }
- delay(10);
+ delay(1);
 }
 
 void draw(){}
 
 void altTab(){
-  robot.keyPress(KeyEvent.VK_SPACE);
-  delay(100);
-  robot.keyRelease(KeyEvent.VK_SPACE);
-  robot.keyPress(KeyEvent.VK_ESCAPE);
-  delay(100);
-  robot.keyRelease(KeyEvent.VK_ESCAPE);
-  robot.keyPress(KeyEvent.VK_WINDOWS);
-  robot.keyPress(KeyEvent.VK_M);
-  delay(100);
-  robot.keyRelease(KeyEvent.VK_WINDOWS);
-  robot.keyRelease(KeyEvent.VK_M);
-  
+  try{
+    robot.keyPress(KeyEvent.VK_SPACE);
+    delay(10);
+    robot.keyRelease(KeyEvent.VK_SPACE);
+    robot.keyPress(KeyEvent.VK_ESCAPE);
+    delay(10);
+    robot.keyRelease(KeyEvent.VK_ESCAPE);
+    robot.keyPress(KeyEvent.VK_ALT);
+    robot.keyPress(KeyEvent.VK_TAB);
+    delay(10);
+    robot.keyRelease(KeyEvent.VK_ALT);
+    robot.keyRelease(KeyEvent.VK_TAB); 
+  } catch (Exception e) {
+    e.printStackTrace();
+    print(e);
+  }
 }
