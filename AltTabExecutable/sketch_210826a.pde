@@ -41,7 +41,7 @@ void serialEvent(Serial myPort){
    altTab = true;
    altTab();
  }
- delay(1);
+ // delay(1);
 }
 
 void draw(){}
@@ -57,7 +57,7 @@ void altTab(){
     robot.keyPress(KeyEvent.VK_ALT);
     robot.keyPress(KeyEvent.VK_TAB);
     delay(10);
-    robot.keyRelease(KeyEvent.VK_ALT);
+    robot.keyRelease(KeyEvent.VK_ALT);    
     robot.keyRelease(KeyEvent.VK_TAB); 
   } catch (Exception e) {
     e.printStackTrace();
